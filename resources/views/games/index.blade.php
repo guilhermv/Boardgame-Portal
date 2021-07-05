@@ -11,7 +11,11 @@
                     <hr>
                     @foreach ($games as $game)
                         <article>
-                            <h4>{{$game->title}}</h4>
+                            <h4>
+                                <a href="{{$game->path()}}">
+                                    {{$game->title}}
+                                </a>
+                            </h4>
                             <div class="body">{{$game->description}}</div>
                         </article>
 

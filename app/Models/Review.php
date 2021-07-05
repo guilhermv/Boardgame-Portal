@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Review extends Model
 {
     use HasFactory;
+    public function owner()
+    {
+        return $this->belongsTo(User::class, 'player_id');
+    }
 }

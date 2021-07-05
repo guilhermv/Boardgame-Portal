@@ -23,7 +23,6 @@ class GameFactory extends Factory
     public function definition()
     {
         return [
-            'player_id' => User::factory()->create()->id,
             'title' => $this->faker->sentence(),
             'description' => $this->faker->paragraph(),
             'genre' => $this->faker->sentence(),
